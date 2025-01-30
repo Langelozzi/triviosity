@@ -1,13 +1,13 @@
 import Fastify from "fastify";
-import { PORT } from "./config/env.js";
-import healthRoutes from "./routes/health.route.js";
+import { API_VERSION, PORT } from "./config/env.js";
 import { prisma } from "./config/prisma.js";
+import apiRoutes from "./routes/index.js";
 
 // Define fastify instance
 const fastify = Fastify({ logger: true });
 
-// Register routes
-fastify.register(healthRoutes, { prefix: '/health' });
+// Register api routes
+fastify.register(apiRoutes, { prefix: `/api/v${API_VERSION}` });
 
 // Add hooks
 fastify.addHook('onClose', async () => {
