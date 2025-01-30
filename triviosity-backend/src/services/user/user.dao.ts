@@ -1,5 +1,5 @@
-import { prisma } from "../config/prisma.js";
-import { User, UserBody } from "../types/user.js";
+import { prisma } from "../../config/prisma.js";
+import { User, UserBody } from "./user.types.js";
 
 export const getAllUsersDao = async (): Promise<User[]> => {
     return await prisma.user.findMany();

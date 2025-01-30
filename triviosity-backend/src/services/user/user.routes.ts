@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { createUserHandler, getAllUsersHandler } from "../../controllers/v1/user.controller.js";
+import { createUserHandler, getAllUsersHandler } from "./user.controller.js";
 
 const userSchema = {
     body: {

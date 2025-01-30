@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
-import healthRoutes from "./v1/health.route.js";
-import userRoutes from "./v1/user.route.js";
+import healthRoutes from "./services/health/health.routes.js";
+import userRoutes from "./services/user/user.routes.js";
 
 export default async function apiRoutes(fastify: FastifyInstance) {
     fastify.register(healthRoutes, { prefix: '/health' });

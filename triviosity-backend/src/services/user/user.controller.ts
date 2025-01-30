@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { createUser, getAllUsers } from "../../services/user.service.js";
-import { UserBody } from "../../types/user.js";
+import { createUser, getAllUsers } from "./user.service.js";
+import { UserBody } from "./user.types.js";
 
 
 export const getAllUsersHandler = async (req: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> => {

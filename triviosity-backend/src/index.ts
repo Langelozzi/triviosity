@@ -1,7 +1,7 @@
 import Fastify from "fastify";
 import { API_VERSION, PORT } from "./config/env.js";
 import { prisma } from "./config/prisma.js";
-import apiRoutes from "./routes/index.js";
+import apiRoutes from "./router.js";
 
 // Define fastify instance
 const fastify = Fastify({ logger: true });
